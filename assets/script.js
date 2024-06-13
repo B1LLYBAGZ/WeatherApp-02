@@ -74,6 +74,7 @@ function displayWeather(data, cityName) {
   // Display city and current weather
   const currentWeather = data.list[0];
   const iconUrl = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`;
+  const tempF = (currentWeather.main.temp * 9) / 5 + 32;
   const todayDiv = document.createElement("div");
   todayDiv.classList.add("weather-day");
   todayDiv.innerHTML = `
@@ -82,7 +83,7 @@ function displayWeather(data, cityName) {
         <img class="weather-icon" src="${iconUrl}" alt="${
     currentWeather.weather[0].description
   }">
-        <p>Temp: ${currentWeather.main.temp} °C</p>
+        <p>Temp: ${tempF.toFixed(1)} °F</p>
         <p>Weather: ${currentWeather.weather[0].description}</p>
         <p>Humidity: ${currentWeather.main.humidity}%</p>
         <p>Wind Speed: ${currentWeather.wind.speed} m/s</p>
@@ -93,6 +94,7 @@ function displayWeather(data, cityName) {
   const forecast = data.list.slice(0, 5); // Get first 5 entries for simplicity
   forecast.forEach((day) => {
     const iconUrl = `http://openweathermap.org/img/wn/${day.weather[0].icon}.png`;
+    const tempF = (day.main.temp * 9) / 5 + 32;
     const dayDiv = document.createElement("div");
     dayDiv.classList.add("weather-day", "col");
     dayDiv.innerHTML = `
@@ -100,7 +102,7 @@ function displayWeather(data, cityName) {
             <img class="weather-icon" src="${iconUrl}" alt="${
       day.weather[0].description
     }">
-            <p>Temp: ${day.main.temp} °C</p>
+            <p>Temp: ${tempF.toFixed(1)} °F</p>
             <p>Weather: ${day.weather[0].description}</p>
             <p>Humidity: ${day.main.humidity}%</p>
             <p>Wind Speed: ${day.wind.speed} m/s</p>
