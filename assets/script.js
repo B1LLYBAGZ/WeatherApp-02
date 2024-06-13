@@ -47,7 +47,7 @@ function displaySearchHistory() {
 // Function to fetch coordinates for a city using OpenWeatherMap API
 function fetchCoordinates(city) {
   const apiKey = "aa4146c1bc0c616b862a41b2c807ef06"; // API key for OpenWeatherMap
-  const url = `http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`; // URL for the geocoding API
+  const url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`; // Use HTTPS for the geocoding API
 
   fetch(url)
     .then((response) => response.json()) // Parse the response as JSON
@@ -67,7 +67,7 @@ function fetchCoordinates(city) {
 // Function to fetch weather data using coordinates and OpenWeatherMap API
 function fetchWeather(lat, lon, cityName) {
   const apiKey = "aa4146c1bc0c616b862a41b2c807ef06"; // API key for OpenWeatherMap
-  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`; // URL for the weather API
+  const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`; // Use HTTPS for the weather API
 
   fetch(url)
     .then((response) => response.json()) // Parse the response as JSON
@@ -84,7 +84,7 @@ function displayWeather(data, cityName) {
 
   // Display city and current weather
   const currentWeather = data.list[0]; // Get current weather data
-  const iconUrl = `http://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`; // Get the weather icon URL
+  const iconUrl = `https://openweathermap.org/img/wn/${currentWeather.weather[0].icon}.png`; // Get the weather icon URL
   const tempF = (currentWeather.main.temp * 9) / 5 + 32; // Convert temperature to Fahrenheit
   const todayDiv = document.createElement("div"); // Create a new div for today's weather
   todayDiv.classList.add("weather-day"); // Add class to the div
@@ -104,7 +104,7 @@ function displayWeather(data, cityName) {
   // Display 5-day forecast
   const forecast = data.list.slice(0, 5); // Get first 5 entries for simplicity
   forecast.forEach((day) => {
-    const iconUrl = `http://openweathermap.org/img/wn/${day.weather[0].icon}.png`; // Get the weather icon URL
+    const iconUrl = `https://openweathermap.org/img/wn/${day.weather[0].icon}.png`; // Get the weather icon URL
     const tempF = (day.main.temp * 9) / 5 + 32; // Convert temperature to Fahrenheit
     const dayDiv = document.createElement("div"); // Create a new div for the forecast
     dayDiv.classList.add("weather-day", "col"); // Add classes to the div
