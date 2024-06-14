@@ -21,11 +21,20 @@ header {
   padding: 20px;
 }
 
+.box {
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 20px;
+}
+
 .weather-day {
   padding: 10px;
   border: 1px solid #ddd;
   margin: 10px;
   text-align: center;
+  background-color: #fff;
 }
 
 .weather-icon {
