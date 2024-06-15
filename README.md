@@ -46,3 +46,12 @@ The Weather Dashboard is a web application designed to help users search for and
 - **Bootstrap:** [Bootstrap Documentation](https://getbootstrap.com/docs/4.3/getting-started/introduction/)
 - **Day.js:** [Day.js Documentation](https://day.js.org/)
 - **Weather API:**[ Open Weather API](https://openweathermap.org/api)
+
+## Pictures
+
+<img width="1680" alt="Screenshot 2024-06-14 at 6 14 34 PM" src="https://github.com/B1LLYBAGZ/WeatherApp-02/assets/164563465/9effca16-509e-4383-a60d-06708526eb3d">
+
+<img width="1680" alt="Screenshot 2024-06-14 at 6 14 06 PM" src="https://github.com/B1LLYBAGZ/WeatherApp-02/assets/164563465/912a891e-b33c-4ab9-a64f-c7285a0e232c">
+
+<img width="1680" alt="Screenshot 2024-06-14 at 6 13 48 PM" src="https://github.com/B1LLYBAGZ/WeatherApp-02/assets/164563465/bfc41337-92e4-4695-9ed0-b628ad3d9b76">
+
